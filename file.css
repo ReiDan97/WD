@@ -187,6 +187,24 @@ body {
   display: block;
   font-weight: bold;
 }
+.thank-you {
+  position: absolute;
+  inset: 0;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  z-index: 10;
+}
+
 .hidden {
   display: none;
+}
+
+@media (hover: none) {
+  .nav-arrows {
+    display: none;
+  }
 }

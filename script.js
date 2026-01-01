@@ -14,6 +14,7 @@ let isDragging = false;
 /* =========================
    OPEN PASSPORT (TAP / CLICK)
 ========================= */
+
 passport.addEventListener("click", () => {
   if (state === 0) {
     passport.classList.add("open");
@@ -112,6 +113,7 @@ form.addEventListener("submit", () => {
     thankYou.classList.remove("hidden");
   }, 500);
 });
+
 
 
 // https://docs.google.com/forms/d/e/1FAIpQLSfxLXK072wAoglEhpFfRyprwhvNuvRqu2R2jwaADOWkB9auCQ/formResponse
