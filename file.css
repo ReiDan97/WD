@@ -6,12 +6,13 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #eaeaea;
   font-family: Arial, sans-serif;
+  
 }
 
 /* CONTAINER */
@@ -25,6 +26,7 @@ body {
   width: min(90vw, 380px);
   height: calc(min(90vw, 380px) * 1.5);
   transform-style: preserve-3d;
+  perspective: 1200px;
 }
 
 /* COVER */
@@ -70,50 +72,30 @@ body {
 .page {
   position: absolute;
   inset: 0;
-  padding: 20px;
-  background: #fafafa;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
   transform-origin: left center;
-  transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  backface-visibility: hidden;
 }
 
 /* PAGE STATES */
 /* INITIAL STATES */
-.page-1 {
-  z-index: 3;
-  transform: rotateY(0deg);
-}
-
-.page-icons {
-  z-index: 2;
-  transform: rotateY(180deg);
-}
-
-.page-rsvp {
-  z-index: 1;
-  transform: rotateY(180deg);
-}
+.page-1 { transform: rotateY(0deg); z-index: 3; }
+.page-icons { transform: rotateY(180deg); z-index: 2; }
+.page-rsvp { transform: rotateY(180deg); z-index: 1; }
 
 /* PAGE 2 OPEN (icons) */
-.passport.page-2-open .page-1 {
-  transform: rotateY(-180deg);
+/* Page 1 → Page 2 */
+.passport.page-2-open .page-1 { transform: rotateY(-180deg); }
+.passport.page-2-open .page-icons { transform: rotateY(0deg); }
+
+/* Page 2 → Page 3 */
+.passport.page-3-open .page-icons { transform: rotateY(-180deg); }
+.passport.page-3-open .page-rsvp { transform: rotateY(0deg); }
+
+.page-flipping {
+  transform: rotateY(-180deg) scale(0.995);
 }
-
-.passport.page-2-open .page-icons {
-  transform: rotateY(0deg);
-}
-
-/* PAGE 3 OPEN (RSVP) */
-.passport.page-3-open .page-icons {
-  transform: rotateY(-180deg);
-}
-
-.passport.page-3-open .page-rsvp {
-  transform: rotateY(0deg);
-}
-
-
 /* PAGE CONTENT */
 .photo {
   height: 45%;
