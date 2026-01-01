@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wedding Passport RSVP</title>
+  <link rel="stylesheet" href="file.css" />
+</head>
+<body>
+
+<div class="passport-wrapper">
+  <div class="passport">
+
+    <!-- COVER -->
+    <div class="passport-cover">
+      <div class="tap-hint">Tap to open</div>
+    </div>
+
+    <!-- PAGES -->
+    <div class="passport-pages">
+
+      <div class="page page-1 active">
+        <img src="img/top.jpg" class="photo" alt="">
+        <img src="img/bottom.png" class="photo" alt="">
+      </div>
+
+      <div class="page page-icons">
+        <div class="icons">
+          <div class="icon">
+            <a href="https://maps.app.goo.gl/CyQAdpvBkiMCad5AA" target="_blank"><img src="img/church.png" alt=""></a>
+            <span>Location</span>
+          </div>
+    
+          <div class="icon">
+            <a href="https://maps.app.goo.gl/LAF9fBy3NwgEVGC5A" target="_blank"><img src="img/food.png" alt=""></a>
+            <span>Catering</span>
+          </div>
+    
+          <div class="icon">
+            <img src="img/bnb.png" alt="">
+            <span>Hotel/BnB</span>
+          </div>
+        </div>
+        </div>
+
+       <!-- PAGE 3 - RSVP -->
+       
+      <div class="page page-rsvp">
+
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfxLXK072wAoglEhpFfRyprwhvNuvRqu2R2jwaADOWkB9auCQ/formResponse"
+          method="POST"
+          target="hidden_iframe"
+          class = "passport-form">
+
+          <input type="text" name="entry.127661582" placeholder="Your Name" required/>
+
+          <label><input type="radio" name="entry.877086558" value="Yes" required/>Yes</label>
+
+          <label><input type="radio" name="entry.877086558" value="No"/>No</label>
+
+          <textarea name="entry.2606285" placeholder="Notes"></textarea>
+
+          <button type="submit">Send RSVP</button>
+          
+        </form>
+
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+      </div>
+      
+      <div class="thank-you hidden">
+        Thank you for your RSVP 💙
+      </div>
+
+
+    
+      <div class="nav-arrows">
+          <button class="arrow left">←</button>
+          <button class="arrow right">→</button>
+        </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
