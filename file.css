@@ -10,7 +10,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eaeaea;
+  background-image: url('img/sunset.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   
 }
@@ -25,26 +28,55 @@ body {
   position: relative;
   width: min(90vw, 380px);
   height: calc(min(90vw, 380px) * 1.5);
+  perspective: 1400px;
   transform-style: preserve-3d;
-  perspective: 1200px;
+  margin: 0 auto;        /* center on screen */
+  padding: 0;             /* no internal space */
+  overflow: visible;      /* pages will rotate without being cut */
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 /* COVER */
 .passport-cover {
   position: absolute;
   inset: 0;
-  background-image: url("img/pass_front.jpg");
+  background-image: url("img/PASSPORT/Passport.jpg");
   background-size: cover;
-  background-repeat: none;
+  background-position: center;
+  background-repeat: no-repeat;;
+
   transform-origin: left center;
   transform-style: preserve-3d;
-  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 0.9s ease;
   backface-visibility: hidden;
-  z-index: 3;
+  z-index: 4;
 
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
+}
+
+.page-bottom {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("img/PASSPORT/Passport_B.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+  transform: rotateY(180deg);
+  z-index: 1;
 }
 
 .tap-hint {
@@ -71,30 +103,72 @@ body {
 /* PAGE BASE */
 .page {
   position: absolute;
-  inset: 0;
-  transform-origin: left center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
   backface-visibility: hidden;
+  will-change: transform;
+  transition: transform 0.9s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* PAGE STATES */
 /* INITIAL STATES */
-.page-1 { transform: rotateY(0deg); z-index: 3; }
-.page-icons { transform: rotateY(180deg); z-index: 2; }
-.page-rsvp { transform: rotateY(180deg); z-index: 1; }
+.page-1 { 
+  position: absolute;
+  inset: 0;
 
+  /*background-image: url("img/PASSPORT/Page_02.jpg");*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+  transform: rotateY(0deg); z-index: 4; 
+}
+.page-icons {   position: absolute;
+  inset: 0;
+  background-image: url("img/PASSPORT/Page_03.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateY(180deg); z-index: 3;
+ }
+.page-rsvp { transform: rotateY(180deg); z-index: 2; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: left center;
+  transform-style: preserve-3d;}
 /* PAGE 2 OPEN (icons) */
 /* Page 1 → Page 2 */
-.passport.page-2-open .page-1 { transform: rotateY(-180deg); }
+.passport.page-2-open .page-1 { transform: rotateY(-180deg) translateZ(2px); }
 .passport.page-2-open .page-icons { transform: rotateY(0deg); }
 
 /* Page 2 → Page 3 */
 .passport.page-3-open .page-icons { transform: rotateY(-180deg); }
 .passport.page-3-open .page-rsvp { transform: rotateY(0deg); }
+.passport.page-3-open .page-bottom { transform: rotateY(180deg) translateZ(2px); }
+
+.passport.page-4-open .page-rsvp { transform: rotateY(-180deg) translateZ(2px); }
+.passport.page-4-open .page-bottom { transform: rotateY(0); }
 
 .page-flipping {
   transform: rotateY(-180deg) scale(0.995);
+}
+.page.flip-back {
+  transform-origin: right center;
 }
 /* PAGE CONTENT */
 .photo {
@@ -127,7 +201,7 @@ body {
   pointer-events: auto;
   background: rgba(0, 0, 0, 0.05);
   border: none;
-  font-size: 24px;
+  font-size: 12px;
   padding: 6px 12px;
   cursor: pointer;
   border-radius: 4px;
@@ -143,31 +217,32 @@ body {
   display: none;
 }
 
-.passport:not(.page-2-open) .arrow.left {
-  visibility: hidden;
-}
-
-.passport.page-3-open .arrow.right {
+.passport.page-4-open .arrow.right {
   visibility: hidden;
 }
 
 .icons {
+  position: relative;     /* absolute children refer to this */
+  width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+}
+.icon {
+  position: absolute;     /* relative to .icons */
+  width: 86px;            /* width of the icon container */
+  height: 86px;           /* allow space for text below image */
   text-align: center;
 }
 
 .icon img {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 8px;
+  width: 100%;            /* fill the container */
+  height: auto;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .icon span {
+  font-size: 12px;        /* label below the icon */
   display: block;
-  font-weight: bold;
 }
 .thank-you {
   position: absolute;
@@ -185,8 +260,24 @@ body {
   display: none;
 }
 
-@media (hover: none) {
-  .nav-arrows {
-    display: none;
+@media screen and (min-width: 800px) {
+  .passport {
+    width: 400px;                   /* bigger width on desktop */
+    height: 600px;                  /* same 2:3 ratio */
   }
+}
+.tap-zone {
+  position: absolute;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  z-index: 10;
+}
+
+.tap-left {
+  left: 0;
+}
+
+.tap-right {
+  right: 0;
 }
