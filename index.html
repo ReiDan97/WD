@@ -6,8 +6,9 @@
   <title>Wedding Passport RSVP</title>
   <link rel="stylesheet" href="file.css" />
 </head>
-<body>
+<body oncontextmenu="return false">
 
+  
 <div class="passport-wrapper">
   <div class="passport">
 
@@ -23,17 +24,16 @@
 
       <div class="page page-icons">
         <div class="icons">
-          <div class="icon" style="top: 28.2%; left: 39.1%;">
+          <div class="icon" style="top: 28.2%; left: 39.5%;">
             <a href="https://maps.app.goo.gl/CyQAdpvBkiMCad5AA" target="_blank"><img src="img/PASSPORT/Church_Button.png" alt=""></a>
           </div>
     
-          <div class="icon" style="top: 40.5%; left: 39.1%;">
+          <div class="icon" style="top: 40.5%; left: 39.9%;">
             <a href="https://maps.app.goo.gl/LAF9fBy3NwgEVGC5A" target="_blank"><img src="img/PASSPORT/Recivement_Button.png" alt=""></a>
           </div>
     
-          <div class="icon" style="top: 73.6%; left: 39.1%;">
-            <img src="img/PASSPORT/Hotel_Button.png" alt="">
-            <span>Hotel/BnB</span>
+          <div class="icon" style="top: 73.9%; left: 39.5%;">
+            <a href="https://docs.google.com/spreadsheets/d/1BP8Tcu1GW60aQaXCk0k1B9Zywrbj7LwDcf5idEWQh3w/edit?usp=sharing" target="_blank"><img src="img/PASSPORT/Hotel_Button.png" alt=""></a>
           </div>
         </div>
         </div>
@@ -48,15 +48,15 @@
           target="hidden_iframe"
           class = "passport-form">
 
-          <input type="text" name="entry.127661582" placeholder="Your Name" required/>
+          <input type="hidden" name="entry.127661582" id="GuestID" />
+          
+          <input type="radio" name="entry.877086558" value="Sì, parteciperò" id="yes" required/><label for="yes" class="hit-area yes-area"></label>
 
-          <label><input type="radio" name="entry.877086558" value="Sì, parteciperò" required/>Yes</label>
+          <input type="radio" name="entry.877086558" value="No, non posso partecipare" id="no"/><label for="no" class="hit-area no-area"></label>
 
-          <label><input type="radio" name="entry.877086558" value="No, non posso partecipare"/>No</label>
+          <textarea name="entry.2606285" placeholder="Notes" class="overlay-textarea"></textarea>
 
-          <textarea name="entry.2606285" placeholder="Notes"></textarea>
-
-          <button type="submit">Send RSVP</button>
+          <button type="submit" class="overlay-submit">Send RSVP</button>
           
         </form>
 

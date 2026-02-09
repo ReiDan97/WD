@@ -138,18 +138,79 @@ tapLeft.addEventListener("click", (e) => {
 
 const params = new URLSearchParams(window.location.search);
 const guest = params.get("rsvp");
+
+if (guest) {
+  document.getElementById("GuestID").value = guest;
+}
 // this is to change the RSVP
 const backgrounds = {
 
-  AliceAlessandro: "img/PASSPORT/Nomi/AliceAlessandro.jpg",
-  Andrea: "img/PASSPORT/Nomi/Andrea.jpg",
-  Arianna: "img/PASSPORT/Nomi/Arianna.jpg"
+  AA012X1: "img/PASSPORT/Nomi/AliceAlessandro.jpg",
+  BB0O2X1: "img/PASSPORT/Nomi/Andrea.jpg",
+  CX0OZ71: "img/PASSPORT/Nomi/Arianna.jpg",
+  DF0OZ81: "img/PASSPORT/Nomi/Betty.jpg",
+  DE0OZ28: "img/PASSPORT/Nomi/Bobo.jpg",
+  Alessandro: "img/PASSPORT/Nomi/Caldari",
+  Francesco: "img/PASSPORT/Nomi/Cibba.jpg",
+  XKGZV9N: "img/PASSPORT/Nomi/DaniFamily.jpg",
+  BFamily: "img/PASSPORT/Nomi/DaniNonniM.jpg",
+  RFamily: "img/PASSPORT/Nomi/DaniNonniP.jpg",
+  Davide: "img/PASSPORT/Nomi/Davide.jpg",
+  DenisJessica: "img/PASSPORT/Nomi/DenisJessica.jpg",
+  EFamilyN: "img/PASSPORT/Nomi/EllieNonni.jpg",
+  Emanuele: "img/PASSPORT/Nomi/Ema.jpg",
+  FrancescoAlessia: "img/PASSPORT/Nomi/FrancescoAlessia.jpg",
+  Giorgio: "img/PASSPORT/Nomi/Giorgio.jpg",
+  GiulioLisa: "img/PASSPORT/Nomi/GiulioLisa.jpg",
+  Irene: "img/PASSPORT/Nomi/Irene.jpg",
+  Martina: "img/PASSPORT/Nomi/Martina.jpg",
+  NicoloChristian: "img/PASSPORT/Nomi/NicoKiki.jpg",
+  PaoloAmanda: "img/PASSPORT/Nomi/PaoloAmanda.jpg",
+  RiccardoMartina: "img/PASSPORT/Nomi/RiccardoMarti.jpg",
+  Roberta: "img/PASSPORT/Nomi/Roberta.jpg",
+  Roberto: "img/PASSPORT/Nomi/Roby.jpg",
+  DavideYlenia: "img/PASSPORT/Nomi/ShaqYle.jpg",
+  Simone: "img/PASSPORT/Nomi/Simone.jpg",
+  SimoneElena: "img/PASSPORT/Nomi/SimoneElena.jpg",
+  Tiziana: "img/PASSPORT/Nomi/Tiziana",
+  TulliaF: "img/PASSPORT/Nomi/Tullia.jpg",
+  Vale: "img/PASSPORT/Nomi/Vale.jpg"
+
+
 };
 const backgrounds_s = {
 
-  AliceAlessandro: "img/PASSPORT/Page_02_P.jpg",
-  Andrea: "img/PASSPORT/Page_02_S.jpg",
-  Arianna: "img/PASSPORT/Page_02_S.jpg"
+  AA012X1: "img/PASSPORT/Page_02_P.jpg",
+  BB0O2X1: "img/PASSPORT/Page_02_S.jpg",
+  CX0OZ71: "img/PASSPORT/Page_02_S.jpg",
+  DF0OZ81: "img/PASSPORT/Page_02_P.jpg",
+  DE0OZ28: "img/PASSPORT/Page_02_S.jpg",
+  Alessandro: "img/PASSPORT/Page_02_S.jpg",
+  Francesco: "img/PASSPORT/Page_02_S.jpg",
+  XKGZV9N: "img/PASSPORT/Page_02_P.jpg",
+  BFamily: "img/PASSPORT/Page_02_P.jpg",
+  RFamily: "img/PASSPORT/Page_02_P.jpg",
+  Davide: "img/PASSPORT/Page_02_S.jpg",
+  DenisJessica: "img/PASSPORT/Page_02_P.jpg",
+  EFamilyN: "img/PASSPORT/Page_02_P.jpg",
+  Emanuele: "img/PASSPORT/Page_02_S.jpg",
+  FrancescoAlessia: "img/PASSPORT/Page_02_P.jpg",
+  Giorgio: "img/PASSPORT/Page_02_S.jpg",
+  GiulioLisa: "img/PASSPORT/Page_02_P.jpg",
+  Irene: "img/PASSPORT/Page_02_S.jpg",
+  Martina: "img/PASSPORT/Page_02_S.jpg",
+  NicoloChristian: "img/PASSPORT/Page_02_P.jpg",
+  PaoloAmanda: "img/PASSPORT/Page_02_P.jpg",
+  RiccardoMartina: "img/PASSPORT/Page_02_P.jpg",
+  Roberta: "img/PASSPORT/Page_02_S.jpg",
+  Roberto: "img/PASSPORT/Page_02_S.jpg",
+  DavideYlenia: "img/PASSPORT/Page_02_P.jpg",
+  Simone: "img/PASSPORT/Page_02_S.jpg",
+  SimoneElena: "img/PASSPORT/Page_02_P.jpg",
+  Tiziana: "img/PASSPORT/Page_02_S.jpg",
+  TulliaF: "img/PASSPORT/Page_02_P.jpg",
+  Vale: "img/PASSPORT/Page_02_P.jpg"
+
 };
 
 if (guest && backgrounds[guest]) {
@@ -161,3 +222,45 @@ if (guest && backgrounds_s[guest]) {
   document.querySelector(".page-1").style.backgroundImage =
     `url("${backgrounds_s[guest]}")`;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const yes = document.getElementById("yes");
+  const no = document.getElementById("no");
+
+  const yesArea = document.querySelector(".yes-area");
+  const noArea = document.querySelector(".no-area");
+
+  yes.addEventListener("change", () => {
+    if (yes.checked) {
+      yesArea.style.backgroundImage = "url('img/PASSPORT/Yes.png')";
+      noArea.style.backgroundImage  = "url('img/PASSPORT/No_grey.png')";
+      console.log('click yes');
+    }
+  });
+
+  no.addEventListener("change", () => {
+    if (no.checked) {
+      noArea.style.backgroundImage  = "url('img/PASSPORT/No.png')";
+      yesArea.style.backgroundImage = "url('img/PASSPORT/Yes_grey.png')";
+      console.log('click no');
+    }
+  });
+});
+
+Copy
+document.onkeydown = (e) => {
+    if (e.key == 123) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key == 'U') {
+        e.preventDefault();
+    }
+};

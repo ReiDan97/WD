@@ -145,12 +145,16 @@ body {
   backface-visibility: hidden;
   transform: rotateY(180deg); z-index: 3;
  }
-.page-rsvp { transform: rotateY(180deg); z-index: 2; 
+ .page-rsvp {
+
+  transform: rotateY(180deg);
+  z-index: 2;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transform-origin: left center;
-  transform-style: preserve-3d;}
+  transform-style: preserve-3d;
+}
 /* PAGE 2 OPEN (icons) */
 /* Page 1 → Page 2 */
 .passport.page-2-open .page-1 { transform: rotateY(-180deg) translateZ(2px); }
@@ -228,8 +232,8 @@ body {
 }
 .icon {
   position: absolute;     /* relative to .icons */
-  width: 86px;            /* width of the icon container */
-  height: 86px;           /* allow space for text below image */
+  width: 90px;            /* width of the icon container */
+  height: 90px;           /* allow space for text below image */
   text-align: center;
 }
 
@@ -262,8 +266,8 @@ body {
 
 @media screen and (min-width: 800px) {
   .passport {
-    width: 400px;                   /* bigger width on desktop */
-    height: 600px;                  /* same 2:3 ratio */
+    width: 450px;                   /* bigger width on desktop */
+    height: 630px;                  /* same 2:3 ratio */
   }
 }
 .tap-zone {
@@ -280,4 +284,58 @@ body {
 
 .tap-right {
   right: 0;
+}
+
+.overlay-textarea {
+  position: absolute;
+  top: 68%;
+  left: 5%;
+  width: 88.7%;
+  height: 11.7%;
+
+  resize: none;
+  background: transparent;
+  border: 2px solid #000;
+  font-size: 16px;
+}
+.overlay-submit {
+  position: absolute;
+  top: 90%;
+  right: 45%;
+  width: 10%;
+}
+
+
+/* hide real radios */
+.page-rsvp input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.hit-area {
+  position: absolute;
+  display: block;
+  z-index: 10;
+  cursor: pointer;
+  background-repeat: no-repeat;      /* don’t tile */
+  background-size: cover;            /* fill the hit area completely */
+}
+
+/* move THESE */
+.yes-area {
+  top: 32%;
+  left: 13%;
+  width: 24%;
+  height: 22.8%;
+  background-size: 230%;
+  background-position: center;       /* keep image centered */
+}
+
+.no-area {
+  top: 32%;
+  left: 65.5%;
+  width: 24%;
+  height: 22.8%;
+  background-size: 230%;
+  background-position: center;       /* keep image centered */
 }
