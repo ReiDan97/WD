@@ -350,7 +350,7 @@ body {
   width: 24%;
   height: 22.8%;
 
-  background-image: url("img/PASSPORT/YES.png");   /* your real file */
+  background-image: url("img/PASSPORT/Yes.png");   /* your real file */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -362,7 +362,7 @@ body {
   width: 24%;
   height: 22.8%;
 
-  background-image: url("img/PASSPORT/NO.png");    /* your real file */
+  background-image: url("img/PASSPORT/No.png");    /* your real file */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
