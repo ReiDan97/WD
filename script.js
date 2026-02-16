@@ -1,4 +1,11 @@
 const passport = document.querySelector(".passport");
+const form = document.querySelector(".passport-form");
+const popup = document.querySelector(".rsvp-popup");
+const closeBtn = document.querySelector(".close-popup");
+const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+let iframeLoadedOnce = false; 
+
+let formSubmitted = false;
 
 let state = 0;
 // 0 = closed
@@ -113,7 +120,7 @@ function swipeRight() {
     state = 0;
   }
 }
-const form = document.querySelector(".passport-form");
+
 const thankYou = document.querySelector(".thank-you");
 
 form.addEventListener("submit", () => {
@@ -246,7 +253,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-Copy
 document.onkeydown = (e) => {
     if (e.key == 123) {
         e.preventDefault();
@@ -264,3 +270,34 @@ document.onkeydown = (e) => {
         e.preventDefault();
     }
 };
+
+form.addEventListener("submit", function (e) {
+  const selected = form.querySelector('input[name="entry.877086558"]:checked');
+
+  if (!selected) {
+    e.preventDefault();
+    alert("Please select Yes or No before sending 💙");
+    return;
+  }
+
+  formSubmitted = true;
+});
+
+iframe.addEventListener("load", function () {
+
+  // Ignore the FIRST load (page load)
+  if (!iframeLoadedOnce) {
+    iframeLoadedOnce = true;
+    return;
+  }
+
+  // Only show popup if form was actually submitted
+  if (formSubmitted) {
+    popup.classList.remove("hidden");
+    formSubmitted = false;
+  }
+});
+
+closeBtn.addEventListener("click", function () {
+  popup.classList.add("hidden");
+});
