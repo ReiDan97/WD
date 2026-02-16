@@ -272,30 +272,30 @@ document.onkeydown = (e) => {
 };
 
 form.addEventListener("submit", function (e) {
+  e.preventDefault(); 
+
   const selected = form.querySelector('input[name="entry.877086558"]:checked');
 
   if (!selected) {
-    e.preventDefault();
     alert("Please select Yes or No before sending 💙");
     return;
   }
 
-  formSubmitted = true;
-});
+  const formData = new FormData(form);
 
-iframe.addEventListener("load", function () {
-
-  // Ignore the FIRST load (page load)
-  if (!iframeLoadedOnce) {
-    iframeLoadedOnce = true;
-    return;
-  }
-
-  // Only show popup if form was actually submitted
-  if (formSubmitted) {
+  fetch(form.action, {
+    method: "POST",
+    mode: "no-cors", // required for Google Forms
+    body: formData
+  })
+  .then(() => {
     popup.classList.remove("hidden");
-    formSubmitted = false;
-  }
+    form.reset();
+    form.querySelector("button").disabled = true;
+  })
+  .catch(() => {
+    alert("Something went wrong. Please try again.");
+  });
 });
 
 closeBtn.addEventListener("click", function () {
