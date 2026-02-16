@@ -154,6 +154,10 @@ body {
   background-repeat: no-repeat;
   transform-origin: left center;
   transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform; 
+
 }
 /* PAGE 2 OPEN (icons) */
 /* Page 1 → Page 2 */
@@ -330,8 +334,14 @@ body {
   display: block;
   z-index: 10;
   cursor: pointer;
-  background-repeat: no-repeat;      /* don’t tile */
-  background-size: cover;            /* fill the hit area completely */
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  transform: translateZ(1px);      
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .yes-area {
