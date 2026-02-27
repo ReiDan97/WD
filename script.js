@@ -157,31 +157,31 @@ const backgrounds = {
   CX0OZ71: "img/PASSPORT/Nomi/Arianna.jpg",
   DF0OZ81: "img/PASSPORT/Nomi/Betty.jpg",
   DE0OZ28: "img/PASSPORT/Nomi/Bobo.jpg",
-  Alessandro: "img/PASSPORT/Nomi/Caldari",
-  Francesco: "img/PASSPORT/Nomi/Cibba.jpg",
+  FKB90LP: "img/PASSPORT/Nomi/Caldari",
+  EEM93IK: "img/PASSPORT/Nomi/Cibba.jpg",
   XKGZV9N: "img/PASSPORT/Nomi/DaniFamily.jpg",
-  BFamily: "img/PASSPORT/Nomi/DaniNonniM.jpg",
-  RFamily: "img/PASSPORT/Nomi/DaniNonniP.jpg",
-  Davide: "img/PASSPORT/Nomi/Davide.jpg",
-  DenisJessica: "img/PASSPORT/Nomi/DenisJessica.jpg",
-  EFamilyN: "img/PASSPORT/Nomi/EllieNonni.jpg",
-  Emanuele: "img/PASSPORT/Nomi/Ema.jpg",
-  FrancescoAlessia: "img/PASSPORT/Nomi/FrancescoAlessia.jpg",
-  Giorgio: "img/PASSPORT/Nomi/Giorgio.jpg",
-  GiulioLisa: "img/PASSPORT/Nomi/GiulioLisa.jpg",
-  Irene: "img/PASSPORT/Nomi/Irene.jpg",
-  Martina: "img/PASSPORT/Nomi/Martina.jpg",
-  NicoloChristian: "img/PASSPORT/Nomi/NicoKiki.jpg",
-  PaoloAmanda: "img/PASSPORT/Nomi/PaoloAmanda.jpg",
-  RiccardoMartina: "img/PASSPORT/Nomi/RiccardoMarti.jpg",
-  Roberta: "img/PASSPORT/Nomi/Roberta.jpg",
-  Roberto: "img/PASSPORT/Nomi/Roby.jpg",
-  DavideYlenia: "img/PASSPORT/Nomi/ShaqYle.jpg",
-  Simone: "img/PASSPORT/Nomi/Simone.jpg",
-  SimoneElena: "img/PASSPORT/Nomi/SimoneElena.jpg",
-  Tiziana: "img/PASSPORT/Nomi/Tiziana",
-  TulliaF: "img/PASSPORT/Nomi/Tullia.jpg",
-  Vale: "img/PASSPORT/Nomi/Vale.jpg"
+  GGB9V8A: "img/PASSPORT/Nomi/DaniNonniM.jpg",
+  GGB9V8B: "img/PASSPORT/Nomi/DaniNonniP.jpg",
+  HJKL777: "img/PASSPORT/Nomi/Davide.jpg",
+  LOP679V: "img/PASSPORT/Nomi/DenisJessica.jpg",
+  KK2412L: "img/PASSPORT/Nomi/EllieNonni.jpg",
+  EEE88K2: "img/PASSPORT/Nomi/Ema.jpg",
+  F9113RS: "img/PASSPORT/Nomi/FrancescoAlessia.jpg",
+  G19LUBS: "img/PASSPORT/Nomi/Giorgio.jpg",
+  GLS1L0K: "img/PASSPORT/Nomi/GiulioLisa.jpg",
+  IM45K1S: "img/PASSPORT/Nomi/Irene.jpg",
+  MDD45HK: "img/PASSPORT/Nomi/Martina.jpg",
+  CNHO999: "img/PASSPORT/Nomi/NicoKiki.jpg",
+  PCH7134: "img/PASSPORT/Nomi/PaoloAmanda.jpg",
+  RK39M79: "img/PASSPORT/Nomi/RiccardoMarti.jpg",
+  RDD45HK: "img/PASSPORT/Nomi/Roberta.jpg",
+  R69B0PC: "img/PASSPORT/Nomi/Roby.jpg",
+  SH99I97: "img/PASSPORT/Nomi/ShaqYle.jpg",
+  SEA89F3: "img/PASSPORT/Nomi/Simone.jpg",
+  SEA85F0: "img/PASSPORT/Nomi/SimoneElena.jpg",
+  TCU12K4: "img/PASSPORT/Nomi/Tiziana",
+  TMLR749: "img/PASSPORT/Nomi/Tullia.jpg",
+  VMBIS01: "img/PASSPORT/Nomi/Vale.jpg"
 
 
 };
@@ -192,31 +192,31 @@ const backgrounds_s = {
   CX0OZ71: "img/PASSPORT/Page_02_S.jpg",
   DF0OZ81: "img/PASSPORT/Page_02_P.jpg",
   DE0OZ28: "img/PASSPORT/Page_02_S.jpg",
-  Alessandro: "img/PASSPORT/Page_02_S.jpg",
-  Francesco: "img/PASSPORT/Page_02_S.jpg",
+  FKB90LP: "img/PASSPORT/Page_02_S.jpg",
+  EEM93IK: "img/PASSPORT/Page_02_S.jpg",
   XKGZV9N: "img/PASSPORT/Page_02_P.jpg",
-  BFamily: "img/PASSPORT/Page_02_P.jpg",
-  RFamily: "img/PASSPORT/Page_02_P.jpg",
-  Davide: "img/PASSPORT/Page_02_S.jpg",
-  DenisJessica: "img/PASSPORT/Page_02_P.jpg",
-  EFamilyN: "img/PASSPORT/Page_02_P.jpg",
-  Emanuele: "img/PASSPORT/Page_02_S.jpg",
-  FrancescoAlessia: "img/PASSPORT/Page_02_P.jpg",
-  Giorgio: "img/PASSPORT/Page_02_S.jpg",
-  GiulioLisa: "img/PASSPORT/Page_02_P.jpg",
-  Irene: "img/PASSPORT/Page_02_S.jpg",
-  Martina: "img/PASSPORT/Page_02_S.jpg",
-  NicoloChristian: "img/PASSPORT/Page_02_P.jpg",
-  PaoloAmanda: "img/PASSPORT/Page_02_P.jpg",
-  RiccardoMartina: "img/PASSPORT/Page_02_P.jpg",
-  Roberta: "img/PASSPORT/Page_02_S.jpg",
-  Roberto: "img/PASSPORT/Page_02_S.jpg",
-  DavideYlenia: "img/PASSPORT/Page_02_P.jpg",
-  Simone: "img/PASSPORT/Page_02_S.jpg",
-  SimoneElena: "img/PASSPORT/Page_02_P.jpg",
-  Tiziana: "img/PASSPORT/Page_02_S.jpg",
-  TulliaF: "img/PASSPORT/Page_02_P.jpg",
-  Vale: "img/PASSPORT/Page_02_P.jpg"
+  GGB9V8A: "img/PASSPORT/Page_02_P.jpg",
+  GGB9V8B: "img/PASSPORT/Page_02_P.jpg",
+  HJKL777: "img/PASSPORT/Page_02_S.jpg",
+  LOP679V: "img/PASSPORT/Page_02_P.jpg",
+  KK2412L: "img/PASSPORT/Page_02_P.jpg",
+  EEE88K2: "img/PASSPORT/Page_02_S.jpg",
+  F9113RS: "img/PASSPORT/Page_02_P.jpg",
+  G19LUBS: "img/PASSPORT/Page_02_S.jpg",
+  GLS1L0K: "img/PASSPORT/Page_02_P.jpg",
+  IM45K1S: "img/PASSPORT/Page_02_S.jpg",
+  MDD45HK: "img/PASSPORT/Page_02_S.jpg",
+  CNHO999: "img/PASSPORT/Page_02_P.jpg",
+  PCH7134: "img/PASSPORT/Page_02_P.jpg",
+  RK39M79: "img/PASSPORT/Page_02_P.jpg",
+  RDD45HK: "img/PASSPORT/Page_02_S.jpg",
+  R69B0PC: "img/PASSPORT/Page_02_S.jpg",
+  SH99I97: "img/PASSPORT/Page_02_P.jpg",
+  SEA89F3: "img/PASSPORT/Page_02_S.jpg",
+  SEA85F0: "img/PASSPORT/Page_02_P.jpg",
+  TCU12K4: "img/PASSPORT/Page_02_S.jpg",
+  TMLR749: "img/PASSPORT/Page_02_P.jpg",
+  VMBIS01: "img/PASSPORT/Page_02_P.jpg"
 
 };
 
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
   yes.addEventListener("change", () => {
     if (yes.checked) {
       yesArea.style.backgroundImage = "url('img/PASSPORT/Yes.png')";
-      noArea.style.backgroundImage  = "url('img/PASSPORT/No_grey.png')";
+      noArea.style.backgroundImage = "none";
       console.log('click yes');
     }
   });
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
   no.addEventListener("change", () => {
     if (no.checked) {
       noArea.style.backgroundImage  = "url('img/PASSPORT/No.png')";
-      yesArea.style.backgroundImage = "url('img/PASSPORT/Yes_grey.png')";
+      yesArea.style.backgroundImage = "none";
       console.log('click no');
     }
   });

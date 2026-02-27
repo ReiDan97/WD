@@ -305,10 +305,11 @@ body {
   background: transparent;
   border: 2px solid #000;
   font-size: 16px;
+  box-sizing: border-box;
 }
 .overlay-submit {
   position: absolute;
-  top: 85%;
+  top: 86%;
   left: 50%;
   transform: translateX(-50%);
   border: none;
