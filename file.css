@@ -256,12 +256,6 @@ body {
   font-size: 12px;        /* label below the icon */
   display: block;
 }
-.page.page-icons {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 9 / 16; /* match your background image ratio */
-  background: url(...) no-repeat center / contain;
-}
 .thank-you {
   position: absolute;
   inset: 0;
