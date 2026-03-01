@@ -244,12 +244,23 @@ body {
   gap: 25px;
 }
 .icon {
-  position: absolute;
-  width: clamp(70px, 18vw, 100px);
-  height: clamp(30px, 8vw, 50px);
-  aspect-ratio: 2 / 1; /* width : height ratio */
+    position: absolute;
+    width: 10%;              /* better than clamp here */
+    aspect-ratio: 1 / 1;     /* adjust shape */
+    
   background: rgba(255, 0, 0, 0.3);
   
+}
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* optional */
+}
+
+.map-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .icon span {
