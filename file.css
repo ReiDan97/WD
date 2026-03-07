@@ -320,6 +320,14 @@ body {
   font-size: 16px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 799px) {
+  .overlay-textarea {
+    width: 85%;       /* slightly narrower for mobile */
+    left: 5%;       /* adjust left so it's centered */
+    font-size: 14px;  /* smaller font fits better on mobile */
+    height: 11.7%;
+  }
+}
 .overlay-submit {
   position: absolute;
   top: 86%;
