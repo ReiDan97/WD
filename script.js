@@ -160,8 +160,10 @@ const backgrounds = {
   FKB90LP: "img/PASSPORT/Nomi/Caldari",
   EEM93IK: "img/PASSPORT/Nomi/Cibba.jpg",
   XKGZV9N: "img/PASSPORT/Nomi/DaniFamily.jpg",
+  XKGZV91: "img/PASSPORT/Nomi/DaniFamily.jpg",
   GGB9V8A: "img/PASSPORT/Nomi/DaniNonniM.jpg",
   GGB9V8B: "img/PASSPORT/Nomi/DaniNonniP.jpg",
+  GGB9V81: "img/PASSPORT/Nomi/DaniNonniP.jpg",
   HJKL777: "img/PASSPORT/Nomi/Davide.jpg",
   LOP679V: "img/PASSPORT/Nomi/DenisJessica.jpg",
   KK2412L: "img/PASSPORT/Nomi/EllieNonni.jpg",
@@ -181,8 +183,8 @@ const backgrounds = {
   SEA85F0: "img/PASSPORT/Nomi/SimoneElena.jpg",
   TCU12K4: "img/PASSPORT/Nomi/Tiziana",
   TMLR749: "img/PASSPORT/Nomi/Tullia.jpg",
-  VMBIS01: "img/PASSPORT/Nomi/Vale.jpg"
-
+  VMBIS01: "img/PASSPORT/Nomi/Vale.jpg",
+  VMBIS02: "img/PASSPORT/Nomi/ValeFamily.jpg"
 
 };
 const backgrounds_s = {
@@ -216,7 +218,10 @@ const backgrounds_s = {
   SEA85F0: "img/PASSPORT/Page_02_P.jpg",
   TCU12K4: "img/PASSPORT/Page_02_S.jpg",
   TMLR749: "img/PASSPORT/Page_02_P.jpg",
-  VMBIS01: "img/PASSPORT/Page_02_P.jpg"
+  VMBIS01: "img/PASSPORT/Page_02_S.jpg",
+  VMBIS02: "img/PASSPORT/Page_02_P.jpg",
+  XKGZV91: "img/PASSPORT/Page_02_S.jpg",
+  GGB9V81: "img/PASSPORT/Page_02_S.jpg",
 
 };
 
