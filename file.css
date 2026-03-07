@@ -33,7 +33,6 @@ body {
   position: relative;
   width: 90vw;                   /* scale down on mobile */
   max-width: 450px;              /* don't exceed desktop width */
-  aspect-ratio: 2 / 3;           /* keep 2:3 ratio exactly */
   perspective: 1400px;
   transform-style: preserve-3d;
   margin: 0 auto;
