@@ -322,7 +322,7 @@ body {
 }
 @media screen and (max-width: 799px) {
   .overlay-textarea {
-    width: 93.2%;       /* slightly narrower for mobile */
+    width: 93.5%;       /* slightly narrower for mobile */
     left: 3%;       /* adjust left so it's centered */
     top: 67.8%;
     font-size: 14px;  /* smaller font fits better on mobile */
