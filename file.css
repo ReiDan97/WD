@@ -30,13 +30,14 @@ body {
 /* PASSPORT */
 .passport {
   position: relative;
-  width: min(90vw, 380px);
-  height: calc(min(90vw, 380px) * 1.5);
-  perspective: 1400px;
+  width: 90vw;                     /* use 90% of viewport width on mobile */
+  max-width: 380px;                /* cap width for larger screens */
+  aspect-ratio: 2 / 3;             /* keep 2:3 ratio exactly */
+  perspective: 1400px;             /* needed for 3D page flips */
   transform-style: preserve-3d;
-  margin: 0 auto;        /* center on screen */
-  padding: 0;             /* no internal space */
-  overflow: visible;      /* pages will rotate without being cut */
+  margin: 0 auto;                  /* center horizontally */
+  padding: 0;
+  overflow: hidden;                /* keep buttons and extra pages hidden */
 }
 *,
 *::before,
@@ -122,15 +123,12 @@ body {
 
 /* PAGE STATES */
 /* INITIAL STATES */
-@media screen and (min-width: 800px) {
-  .passport {
-    height: 630px;
-    width: 450px;                   /* bigger width on desktop */
-  }
+@media screen and (max-width: 799px) {
   .page-1 {
-    background-position: 49% center;
+    background-position: 49% center; /* fix left clipping on mobile */
   }
 }
+
 .page-1 { 
   position: absolute;
   inset: 0;
