@@ -44,7 +44,20 @@ body {
 /* FIX MOBILE LEFT CLIPPING FOR PAGE-1 */
 @media screen and (max-width: 799px) {
   .page-1 {
-    background-position: 49% center; /* slight shift fixes mobile clipping */
+    background-position: 48% center; /* slight shift fixes mobile clipping */
+  }
+  .overlay-textarea {
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    width: 86.7%;
+    height: 11.7%;
+  
+    resize: none;
+    background: transparent;
+    border: 2px solid #000;
+    font-size: 16px;
+    box-sizing: border-box;
   }
 }
 
