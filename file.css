@@ -41,12 +41,6 @@ body {
   overflow: hidden;              /* hide extra buttons/pages */
 }
 
-/* FIX MOBILE LEFT CLIPPING FOR PAGE-1 */
-@media screen and (max-width: 799px) {
-  .page-1 {
-    background-position: 48% center; /* slight shift fixes mobile clipping */
-  }
-}
 
 /* DESKTOP FIX: use original fixed size */
 @media screen and (min-width: 800px) {
