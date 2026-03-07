@@ -122,18 +122,19 @@ body {
 
 /* PAGE STATES */
 /* INITIAL STATES */
-.page-1 {
+.page-1 { 
+  position: absolute;
   inset: 0;
-  width: 101%;
-  left: -0.5%;
-
-  transform-origin: left center;
-  transform: rotateY(0deg) translateX(-0.5px);
-
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
-  z-index: 4;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background-size: 100%;
+  transform: rotateY(0deg) translateX(-0.5px); 
+  z-index: 4; 
 }
 .page-icons {   position: absolute;
   inset: 0;
@@ -284,7 +285,6 @@ body {
 @media screen and (min-width: 800px) {
   .passport {
     width: 450px;                   /* bigger width on desktop */
-    height: 630px;                  /* same 2:3 ratio */
   }
 }
 .tap-zone {
