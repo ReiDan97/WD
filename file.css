@@ -132,8 +132,9 @@ body {
   transform-origin: left center;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  width: 100%;
-  transform: rotateY(0deg); z-index: 4; 
+  background-size: 100%;
+  transform: rotateY(0deg) translateX(-0.5px); 
+  z-index: 4; 
 }
 .page-icons {   position: absolute;
   inset: 0;
