@@ -28,25 +28,16 @@ body {
 }
 
 /* PASSPORT */
-/* MOBILE FIRST: scales with viewport */
 .passport {
   position: relative;
-  width: 90vw;                   /* scale down on mobile */
-  max-width: 450px;              /* don't exceed desktop width */
+  width: min(90vw, 380px);
+  height: calc(min(90vw, 380px) * 1.5);
   perspective: 1400px;
   transform-style: preserve-3d;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;              /* hide extra buttons/pages */
+  margin: 0 auto;        /* center on screen */
+  padding: 0;             /* no internal space */
+  overflow: visible;      /* pages will rotate without being cut */
 }
-
-
-/* DESKTOP FIX: use original fixed size */
-@media screen and (min-width: 800px) {
-  .passport {
-    width: 450px;                  /* fixed desktop width */
-    height: 630px;                 /* fixed desktop height for 2:3 ratio */
-  }
 *,
 *::before,
 *::after {
@@ -130,7 +121,16 @@ body {
 }
 
 /* PAGE STATES */
-
+/* INITIAL STATES */
+@media screen and (min-width: 800px) {
+  .passport {
+    height: 630px;
+    width: 450px;                   /* bigger width on desktop */
+  }
+  .page-1 {
+    background-position: 49% center;
+  }
+}
 .page-1 { 
   position: absolute;
   inset: 0;
