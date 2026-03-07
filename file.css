@@ -322,10 +322,11 @@ body {
 }
 @media screen and (max-width: 799px) {
   .overlay-textarea {
-    width: 85%;       /* slightly narrower for mobile */
+    width: 80%;       /* slightly narrower for mobile */
     left: 5%;       /* adjust left so it's centered */
     font-size: 14px;  /* smaller font fits better on mobile */
     height: 11.7%;
+    border: 2px solid red;
   }
 }
 .overlay-submit {
