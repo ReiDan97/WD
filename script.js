@@ -181,7 +181,7 @@ const backgrounds = {
   SH99I97: "img/PASSPORT/Nomi/ShaqYle.jpg",
   SEA89F3: "img/PASSPORT/Nomi/Simone.jpg",
   SEA85F0: "img/PASSPORT/Nomi/SimoneElena.jpg",
-  TCU12K4: "img/PASSPORT/Nomi/Tiziana",
+  TCU12K4: "img/PASSPORT/Nomi/Tiziana.jpg",
   TMLR749: "img/PASSPORT/Nomi/Tullia.jpg",
   VMBIS01: "img/PASSPORT/Nomi/Vale.jpg",
   VMBIS02: "img/PASSPORT/Nomi/ValeFamily.jpg"
