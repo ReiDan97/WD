@@ -157,7 +157,7 @@ const backgrounds = {
   CX0OZ71: "img/PASSPORT/Nomi/Arianna.jpg",
   DF0OZ81: "img/PASSPORT/Nomi/Betty.jpg",
   DE0OZ28: "img/PASSPORT/Nomi/Bobo.jpg",
-  FKB90LP: "img/PASSPORT/Nomi/Caldari",
+  FKB90LP: "img/PASSPORT/Nomi/Caldari.jpg",
   EEM93IK: "img/PASSPORT/Nomi/Cibba.jpg",
   XKGZV9N: "img/PASSPORT/Nomi/DaniFamily.jpg",
   XKGZV91: "img/PASSPORT/Nomi/Monica.jpg",
